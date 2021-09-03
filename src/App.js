@@ -5,6 +5,8 @@ import './App.css';
 import Circles from './components/Circles';
 
 
+
+
 class App extends Component{
   constructor(props){
     super(props)
@@ -20,6 +22,8 @@ class App extends Component{
      <Header/>
      <Section/>
      <Circles/>
+   
+      
     </div>
   );
 }

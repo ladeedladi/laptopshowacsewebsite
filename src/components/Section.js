@@ -1,6 +1,12 @@
-import React from 'react'
+import React,{useState} from 'react'
+import Playsong from './Playsong'
+
 
 function Section() {
+    const [playSong,setPLaySong]=useState(false)
+    function play(){
+setPLaySong(!playSong)
+    }
     return (
         <>
         <section>
@@ -10,8 +16,10 @@ function Section() {
        <div className="right-section">
           <h1>Feel the music</h1>
           <p>Not every band is Queen</p>
-          <button className="btn">click</button>
+         
+         {playSong ? <Playsong onClick={play}/>:<button onClick={play} className="btn">click</button>}
        </div>
+    
      </section> 
         </>
     )
