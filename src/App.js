@@ -1,5 +1,6 @@
 import React,{Component} from 'react'
-import logo from './image/logo.png'
+import logo from "./images/logo.png"
+import girl from "./images/landing-page-girl.png"
 import './App.css';
 
 
@@ -15,20 +16,31 @@ class App extends Component{
   console.log("render");
   return (
     <div className="App">
-    <nav className={this.state.cond?"nav2":"nav"}>
-   <div className="title"><h1>title</h1></div>
-   <div className="div1">
-    <ul className={this.state.cond?"nav-links-active":"nav-links"} >
-      <li>Home</li>
-      <li>Products</li>
-      <li>Contacts</li>
-    </ul>
-    </div>
-   </nav> 
-   <h1>{this.state.count}</h1>
-<i onClick={()=>{this.setState({cond:!this.state.cond})
-  console.log(this.state.cond)}
-  } className="fas fa-align-justify"></i>
+    <header className="header">
+      <div>
+        <img src={logo} alt="" />
+        <h1>Soundwave</h1>
+      </div>
+      <nav>
+        <ul>
+          <li>Discover</li>
+          <li>Home</li>
+        </ul>
+      </nav>
+    </header>
+     <section>
+       <div className="image-wrapper">
+        <div className="img"></div>
+       </div>
+       <div className="right-section">
+          <h1>Feel the music</h1>
+          <p>Not every band is Queen</p>
+          <button className="btn">click</button>
+       </div>
+     </section>
+     <div className="circle"></div>
+     <div className="circle-2"></div>
+     <div className="circle-3"></div>
     </div>
   );
 }
